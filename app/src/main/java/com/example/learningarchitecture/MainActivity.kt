@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        mainviewmodel=ViewModelProvider(this).get(viewModel::class.java)
+        mainviewmodel=ViewModelProvider(this,MainViewModelFactory(92)).get(viewModel::class.java)
         txtcounter = findViewById(R.id.textView)
         setText()
     }
